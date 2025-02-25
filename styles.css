@@ -29,7 +29,7 @@ h2 {
 /* Container de cards com Grid Responsivo */
 .apps-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adapta automaticamente os cards */
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adapta automaticamente os cards */
   gap: 16px; /* Espaçamento entre os cards */
   margin-bottom: 40px;
 }
@@ -46,14 +46,14 @@ h2 {
   justify-content: space-between;
   align-items: center;
   transition: all 0.3s ease;
-  width: 230px; /* Mantém o tamanho padrão dos cards */
+  width: 100%; /* Ocupa a largura total do container */
 }
 
 /* Estilo da imagem do card */
 .app-card img {
   width: 100%;
-    border-radius: 25%; /* Deixa as imagens arredondadas */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  border-radius: 25%; /* Deixa as imagens arredondadas */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
 /* Estilo do título no card */
@@ -111,7 +111,7 @@ header {
   }
 
   .app-card {
-    height: 250px; /* Ajuste a altura para telas menores */
+    height: auto; /* Ajuste a altura para telas menores */
   }
 
   .app-card img {
