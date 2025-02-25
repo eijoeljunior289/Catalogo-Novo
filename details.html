@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEJIF</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="app.css"> <!-- Link para o arquivo CSS específico -->
+    <!-- CSS do Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <!-- Navbar fixa na parte superior -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">GEJIF</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+            aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alternar navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Início <span class="sr-only">(Página atual)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages/apk.html">Aplicativos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages/jogos.html">Jogos</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" id="searchForm">
+                <input class="form-control mr-sm-2" id="searchInput" type="search" placeholder="Pesquisar"
+                    aria-label="Pesquisar">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+            </form>
+        </div>
+    </nav>
+
+    <header class="mt-5 pt-4">
+        <!-- Adicionado espaçamento superior para evitar sobreposição -->
+        <h1 class="text-center"></h1>
+    </header>
+
+    <div class="app-details">
+        <h1 id="app-title">Carregando...</h1>
+        <img id="app-icon" src="" alt="Ícone do App">
+        <p id="app-developer"></p>
+        <!-- Botão de instalação -->
+        <a id="install-button" href="#" style="display: none;">Instalar</a>
+        <a>Capturas de telas</a>
+        <!-- Carrossel de screenshots -->
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <!-- Slides serão preenchidos dinamicamente pelo JavaScript -->
+            </div>
+            <!-- Botões de navegação -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- Paginação -->
+            <div class="swiper-pagination"></div>
+        </div>
+        <p id="app-description"></p>
+        <p><strong>Data de Atualização:</strong> <span id="update-date"></span></p>
+        <p><strong>Categoria:</strong> <span id="app-categoria"></span></p>
+        <p><strong>Preço:</strong> <span id="app-preco"></span></p>
+        <p><strong>Versão:</strong> <span id="app-version"></span></p>
+        <p><strong>Versão do Android:</strong> <span id="android-version"></span></p>
+    </div>
+
+    <!-- Bootstrap JS e dependências -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- JavaScript do Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- JavaScript personalizado -->
+    <script src="details.js"></script>
+</body>
+
+</html>

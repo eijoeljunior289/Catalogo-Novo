@@ -1,0 +1,147 @@
+/* Resetando margens e definindo fundo */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #d2d2d2;
+}
+
+/* Estilo do header */
+header {
+  background-color: #d2d2d2; /* Alterando a cor de fundo do header */
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+/* Definindo padding para a seção principal */
+main {
+  padding: 20px;
+}
+
+/* Estilo dos títulos principais */
+h2 {
+  color: #6200ea;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Container de cards com Grid Responsivo */
+.apps-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adapta automaticamente os cards */
+  gap: 16px; /* Espaçamento entre os cards */
+  margin-bottom: 40px;
+}
+
+/* Estilo para o card individual */
+.app-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  text-align: center;
+  display: flex; /* Flexbox para centralizar conteúdo */
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  width: 230px; /* Mantém o tamanho padrão dos cards */
+}
+
+/* Estilo da imagem do card */
+.app-card img {
+  width: 100%;
+    border-radius: 25%; /* Deixa as imagens arredondadas */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Estilo do título no card */
+.app-card h3 {
+  font-size: 1.2em;
+  margin: 20px 0;
+  color: #333;
+}
+
+/* Estilo da descrição no card */
+.app-card p {
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Adicionando um efeito ao passar o mouse sobre o card */
+.app-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Aumenta a sombra */
+  cursor: pointer;
+}
+
+/* Espaçamento superior para evitar sobreposição da navbar fixa */
+header {
+  margin-top: 60px;
+}
+
+/* Responsividade para diferentes tamanhos de tela */
+
+/* Para telas grandes, com cards distribuídos em várias colunas */
+@media (min-width: 1200px) {
+  .app-card {
+    max-width: 250px; /* Limite para largura de cards */
+  }
+}
+
+/* Para telas médias, 3 cards por linha */
+@media (max-width: 900px) {
+  .apps-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards por linha */
+  }
+}
+
+/* Para telas pequenas, 2 cards por linha */
+@media (max-width: 600px) {
+  .apps-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards por linha */
+  }
+}
+
+/* Para telas muito pequenas, 1 card por linha */
+@media (max-width: 400px) {
+  .apps-container {
+    grid-template-columns: 1fr; /* 1 card por linha */
+  }
+
+  .app-card {
+    height: 250px; /* Ajuste a altura para telas menores */
+  }
+
+  .app-card img {
+    height: 120px; /* Ajuste a altura da imagem */
+  }
+
+  .app-card h3 {
+    font-size: 1em; /* Reduz o tamanho da fonte */
+  }
+
+  .app-card p {
+    font-size: 0.8em; /* Reduz o tamanho da descrição */
+  }
+}
+
+#carouselExampleIndicators {
+  width: 100%; /* Ocupará toda a largura da tela */
+  max-width: 1200px; /* Define um limite máximo para telas grandes */
+  height: 400px; /* Altura fixa */
+  margin: auto; /* Centraliza o carrossel */
+  overflow: hidden; /* Impede vazamentos */
+}
+
+#carouselExampleIndicators .carousel-inner {
+  width: 100%;
+  height: 100%;
+}
+
+#carouselExampleIndicators .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mantém a proporção e corta o excesso */
+}
