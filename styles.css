@@ -145,3 +145,18 @@ header {
   height: 100%;
   object-fit: cover; /* Mantém a proporção e corta o excesso */
 }
+
+/* Rodapé */
+
+footer {
+    text-align: center;
+    background-color: var(--header-bg, #2f9e41);
+    color: white;
+    padding: 15px;
+    font-size: 0.9em;
+}
+
+footer small {
+    display: block;
+}
+
